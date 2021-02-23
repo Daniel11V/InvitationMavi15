@@ -1,0 +1,438 @@
+/* Generales */
+
+:root {
+	--color-primario: #c8a2cb;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+}
+
+.btn {
+	color: white;
+	background-color: var(--color-primario);
+	border-radius: 30px;
+	padding: 10px 40px;
+	border: 1px solid var(--color-primario);
+	text-transform: uppercase;
+}
+
+.btn:hover {
+	color: var(--color-primario);
+	background-color: white;
+}
+
+.btn-alt {
+	color: var(--color-primario);
+	background-color: white;
+	font-weight: 500;
+}
+
+.btn-alt:hover {
+	color: white;
+	background-color: var(--color-primario);
+	border: 1px solid white;
+}
+
+.btn:focus {
+	box-shadow: none;
+}
+
+.fancybox-bg {
+	background-color: var(--color-primario) !important;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/* Animacion fade in */
+.fade-in {
+	animation: fadeIn ease 4s;
+	-webkit-animation: fadeIn ease 4s;
+	-moz-animation: fadeIn ease 4s;
+	-o-animation: fadeIn ease 4s;
+	-ms-animation: fadeIn ease 4s;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-o-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* Flecha para scroll de portada */
+.scroll-down {
+	position: absolute;
+	bottom: 70px;
+	display: block;
+	text-align: center;
+	font-size: 20px;
+	z-index: 100;
+	text-decoration: none;
+	text-shadow: 0;
+	width: 30px;
+	height: 30px;
+	border-bottom: 4px solid #fff;
+	border-right: 4px solid #fff;
+	z-index: 9;
+	left: calc(50% - 15px);
+	-webkit-transform: translate(-50%, 0%) rotate(45deg);
+	-moz-transform: translate(-50%, 0%) rotate(45deg);
+	transform: translate(-50%, 0%) rotate(45deg);
+	-webkit-animation: fade_move_down 2s ease-in-out infinite;
+	-moz-animation: fade_move_down 2s ease-in-out infinite;
+	animation: fade_move_down 2s ease-in-out infinite;
+}
+
+/*animated scroll arrow animation*/
+@-webkit-keyframes fade_move_down {
+	0% {
+		-webkit-transform: translate(0, -10px) rotate(45deg);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: translate(0, 10px) rotate(45deg);
+		opacity: 0;
+	}
+}
+@-moz-keyframes fade_move_down {
+	0% {
+		-moz-transform: translate(0, -10px) rotate(45deg);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		-moz-transform: translate(0, 10px) rotate(45deg);
+		opacity: 0;
+	}
+}
+@keyframes fade_move_down {
+	0% {
+		transform: translate(0, -10px) rotate(45deg);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: translate(0, 10px) rotate(45deg);
+		opacity: 0;
+	}
+}
+
+/* ---------- */
+
+/* Portada */
+section.portada {
+	height: 100vh;
+}
+
+/* ---------- */
+
+/* Cuenta Regresiva */
+
+section.cuenta-regresiva {
+	text-align: center;
+	padding-top: 25px;
+	background-color: var(--color-primario);
+	height: 130px;
+}
+
+section.cuenta-regresiva p {
+	color: white;
+	font-size: 20px;
+	margin: 0;
+}
+
+#reloj {
+	text-align: center;
+	font-size: 25px;
+	margin-bottom: 0;
+}
+
+/* ---------- */
+
+/* Ceremonia y Fiesta */
+
+section.ceremonia-fiesta {
+	padding: 80px 0 100px;
+}
+
+section.ceremonia-fiesta .columna {
+	text-align: center;
+	padding: 0 30px;
+}
+
+section.ceremonia-fiesta .columna h4 {
+	font-weight: 400;
+	font-size: 30px;
+	text-transform: uppercase;
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+section.ceremonia-fiesta .columna p {
+	font-weight: 300;
+	font-size: 17px;
+	margin-bottom: 25px;
+}
+
+section.ceremonia-fiesta .columna img.icon {
+	width: 150px;
+}
+
+section.ceremonia-fiesta .columna img.foto15 {
+	width: 90%;
+}
+
+/* ---------- */
+
+/* Galeria /Historia */
+section.galeria {
+	padding-bottom: 80px;
+}
+
+section.galeria h4 {
+	font-weight: 400;
+	font-size: 35px;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 60px;
+}
+section.galeria .item-galeria {
+	padding: 0 3px;
+	margin-bottom: 5px;
+}
+
+section.galeria .item-galeria a img {
+	transition: all 0.3s ease-out;
+	border-radius: 10px;
+}
+
+section.galeria .item-galeria a:hover img {
+	transform: scale(1.1);
+	position: relative;
+	z-index: 999;
+}
+
+/* ---------- */
+
+/* CONFIRMAR ASISTENCIA */
+
+section.confirmar-asistencia {
+	text-align: center;
+	padding: 100px 0 100px;
+}
+
+section.confirmar-asistencia h4 {
+	font-weight: 400;
+	font-size: 35px;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+section.confirmar-asistencia p {
+	font-weight: 300;
+	font-size: 17px;
+	margin-bottom: 20px;
+}
+
+/* ---------- */
+
+/* INSTAGRAM */
+
+section.instagram {
+	text-align: center;
+	color: white;
+	height: 500px;
+}
+
+section.instagram .contenido {
+	padding: 50px 0;
+}
+
+section.instagram span.hashtag {
+	font-size: 40px;
+	color: white;
+	font-weight: 400;
+	margin-top: 100px;
+}
+
+section.instagram p {
+	font-size: 17px;
+	font-weight: 300;
+	color: white;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+/* ---------- */
+
+/* CANCIONES */
+
+section.canciones {
+	text-align: center;
+	padding: 100px 0 100px;
+}
+
+section.canciones h4 {
+	font-weight: 400;
+	font-size: 35px;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+section.canciones p {
+	font-weight: 300;
+	font-size: 17px;
+	margin-bottom: 20px;
+}
+
+/* ---------- */
+
+/* GRACIAS */
+
+section.gracias {
+	text-align: center;
+	padding: 50px 0;
+	background-color: var(--color-primario);
+}
+
+section.gracias p {
+	text-align: center;
+	color: white;
+	font-size: 19px;
+	margin: 0;
+	padding: 0;
+}
+
+/* ---------- */
+
+/* FOOTER */
+
+section.footer {
+	text-align: center;
+	padding: 20px 0;
+	background-color: #e777cb;
+}
+
+section.footer p {
+	text-align: center;
+	color: white;
+	font-size: 12px;
+	font-weight: 300;
+	margin: 0;
+	padding: 0;
+}
+
+section.footer a {
+	color: white;
+}
+
+/* ---------- */
+
+/* CONTACTO */
+
+section.contacto {
+	padding: 100px 0;
+}
+
+section.contacto h4 {
+	font-weight: 400;
+}
+
+section.contacto p {
+	font-weight: 300;
+}
+
+section.contacto a {
+	color: #35aa7f;
+}
+
+section.contacto a:hover {
+	color: black;
+}
+
+section.contacto ul li {
+	margin-bottom: 5px;
+}
+
+section.contacto ul li i {
+	font-size: 18px;
+	margin-right: 3px;
+}
+
+/* ---------- */
+
+/* Medias queries */
+
+@media (max-width: 760px) {
+	.logo-portada img {
+		max-width: 70%;
+	}
+
+	.logo-portada {
+		text-align: center;
+	}
+
+	section.ceremonia-fiesta .row .columna:nth-child(2) {
+		margin-top: 50px;
+	}
+
+	section.ceremonia-fiesta .row .columna.no-margin-top {
+		margin-top: 0;
+	}
+}
