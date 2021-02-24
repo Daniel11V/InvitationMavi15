@@ -10,6 +10,20 @@ $(".parallax-portada").parallax({
 
 // ----------------------
 
+// Smooth Scrolling:
+
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+	anchor.addEventListener("click", function (e) {
+		e.preventDefault();
+
+		document.querySelector(this.getAttribute("href")).scrollIntoView({
+			behavior: "smooth",
+		});
+	});
+});
+
+// ----------------------
+
 // Cuenta Regresiva:
 
 // Set the date we're counting down to
