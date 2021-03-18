@@ -5,11 +5,6 @@
 	--white_paper_down: #b1b1b11a;
 }
 
-html,
-body {
-	height: 100%;
-}
-
 /* Try Lock Portrait */
 /* @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
 	html {
@@ -57,15 +52,30 @@ body {
 }
 
 .imgPortada {
-	height: 110%;
+	/* height: 110vh;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    background: url(../img/galeria/2.jpg) var(--white_paper_down);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
+	/* height: 100vh; */
+	/* height: -webkit-fill-available; */
+	height: calc(var(--vh) * 110);
 	width: 100%;
-	position: relative;
+	position: fixed;
 	top: 0;
 	left: 0;
 	background: url(../img/galeria/2.jpg) var(--white_paper_down);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center;
+	/* background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; */
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -83,6 +93,15 @@ body {
 	animation: appear 3s 9.5s ease-in-out forwards;
 }
 
+.imgPortadaFalse {
+	/* min-height: 100vh; */
+	/* height: -webkit-fill-available; */
+	height: calc(var(--vh) * 108);
+	width: 100%;
+	background-color: transparent;
+	background-size: cover;
+}
+
 @media (min-width: 800px) {
 	.imgPortada {
 		background: url(../img/galeria/4.jpg) var(--white_paper_down);
@@ -97,8 +116,8 @@ body {
 }
 
 .letter {
-	height: 100vh;
-	height: calc(var(--vh, 1vh) * 100);
+	/* height: 100vh; */
+	height: calc(var(--vh) * 108);
 	width: 100%;
 	background-color: white;
 	position: relative;
@@ -107,29 +126,26 @@ body {
 
 .sticky_effect {
 	position: absolute;
-	top: calc(-40vh - 1vw);
-	top: calc(calc(var(--vh, 1vh) * (-40)) - 1vw);
-	height: calc(140vh + 1vw);
-	height: calc(calc(var(--vh, 1vh) * 140) + 1vw);
+	/* top: calc(-40vh - 1vw); */
+	top: calc(-40% - 1vw);
+	/* top: calc(calc(var(--vh) * (-43.2)) - 1vw); */
+	/* height: calc(140vh + 1vw); */
+	height: calc(140% + 1vw);
+	/* height: calc(calc(var(--vh) * 151.2) + 1vw); */
 	width: 100%;
 }
 
 .letter_content {
-	height: 100vh;
-	height: calc(var(--vh, 1vh) * 100);
+	height: 71.4%;
+	/* height: calc(var(--vh) * 108); */
 	width: 100%;
 	position: sticky;
-	top: calc(70vh - 1vw);
-	top: calc(calc(var(--vh, 1vh) * 70) - 1vw);
+	/* top: calc(70vh - 1vw); */
+	top: calc(70% - 1vw);
+	/* top: calc(calc(var(--vh) * 67.6) - 1vw); */
 }
 
-/* .marcos {
-	width: 100%;
-	position: absolute;
-	top: 0;
-	transform-box: fill-box;
-} */
-
+/*  SVG  */
 .mask_mavi {
 	fill: none;
 	stroke: #fff;
@@ -167,8 +183,7 @@ body {
 	fill: #e1b100;
 }
 
-#mis_quinces path {
-	fill: #e1b100;
+#mis_quince path {
 	fill-rule: evenodd;
 	stroke-width: 0;
 	opacity: 0;
@@ -179,24 +194,132 @@ body {
 	animation: appear 2.5s 12.8s ease-out forwards;
 }
 
+#mis_quince_gold {
+	fill: #e1b100 !important;
+}
+
 #mis_quince_gray {
 	fill: #8a8a8a !important;
 }
 
+#mask_marcoB {
+	transform: translate(
+		calc((100% - calc(calc(var(--vh) * 44.28) + 3%)) / 2),
+		0
+	);
+	-ms-transform: translate(
+		calc((100% - calc(calc(var(--vh) * 44.28) + 3%)) / 2),
+		0
+	);
+	-webkit-transform: translate(
+		calc((100% - calc(calc(var(--vh) * 44.28) + 3%)) / 2),
+		0
+	);
+	-o-transform: translate(
+		calc((100% - calc(calc(var(--vh) * 44.28) + 3%)) / 2),
+		0
+	);
+	-moz-transform: translate(
+		calc((100% - calc(calc(var(--vh) * 44.28) + 3%)) / 2),
+		0
+	);
+}
+
+#mask_marco_goldB {
+	transform: translate(
+		calc((100% - calc(calc(var(--vh) * 44.28) + 3%)) / 2),
+		0
+	);
+	-ms-transform: translate(
+		calc((100% - calc(calc(var(--vh) * 44.28) + 3%)) / 2),
+		0
+	);
+	-webkit-transform: translate(
+		calc((100% - calc(calc(var(--vh) * 44.28) + 3%)) / 2),
+		0
+	);
+	-o-transform: translate(
+		calc((100% - calc(calc(var(--vh) * 44.28) + 3%)) / 2),
+		0
+	);
+	-moz-transform: translate(
+		calc((100% - calc(calc(var(--vh) * 44.28) + 3%)) / 2),
+		0
+	);
+}
+
+#mavi_white_use {
+	fill: #ffffff;
+
+	transform: translate(
+		calc(
+			(101% - min(calc(var(--vh) * 45), calc(calc(var(--vh) * 35) + 10%))) / 2
+		),
+		calc(calc(var(--vh) * (-40)) + 1vw)
+	);
+	-ms-transform: translate(
+		calc(
+			(101% - min(calc(var(--vh) * 45), calc(calc(var(--vh) * 35) + 10%))) / 2
+		),
+		calc(calc(var(--vh) * (-40)) + 1vw)
+	);
+	-webkit-transform: translate(
+		calc(
+			(101% - min(calc(var(--vh) * 45), calc(calc(var(--vh) * 35) + 10%))) / 2
+		),
+		calc(calc(var(--vh) * (-40)) + 1vw)
+	);
+	-o-transform: translate(
+		calc(
+			(101% - min(calc(var(--vh) * 45), calc(calc(var(--vh) * 35) + 10%))) / 2
+		),
+		calc(calc(var(--vh) * (-40)) + 1vw)
+	);
+	-moz-transform: translate(
+		calc(
+			(101% - min(calc(var(--vh) * 45), calc(calc(var(--vh) * 35) + 10%))) / 2
+		),
+		calc(calc(var(--vh) * (-40)) + 1vw)
+	);
+}
+
+#mis_quince_use {
+	transform: translate(
+		max(10%, calc((100% - calc(var(--vh) * 59.4)) / 2)),
+		calc(calc(var(--vh) * (-28.08)) + 1vw)
+	);
+	-ms-transform: translate(
+		max(10%, calc((100% - calc(var(--vh) * 59.4)) / 2)),
+		calc(calc(var(--vh) * (-28.08)) + 1vw)
+	);
+	-webkit-transform: translate(
+		max(10%, calc((100% - calc(var(--vh) * 59.4)) / 2)),
+		calc(calc(var(--vh) * (-28.08)) + 1vw)
+	);
+	-o-transform: translate(
+		max(10%, calc((100% - calc(var(--vh) * 59.4)) / 2)),
+		calc(calc(var(--vh) * (-28.08)) + 1vw)
+	);
+	-moz-transform: translate(
+		max(10%, calc((100% - calc(var(--vh) * 59.4)) / 2)),
+		calc(calc(var(--vh) * (-28.08)) + 1vw)
+	);
+}
+
 .information {
 	width: 85%;
-	height: calc(66vh - 2vw);
-	height: calc(calc(var(--vh, 1vh) * 66) - 2vw);
+	height: calc(66% - 2vw);
+	/* height: calc(calc(var(--vh) * 66) - 2vw); */
 	position: absolute;
-	top: calc(30vh + 1vw);
-	top: calc(calc(var(--vh, 1vh) * 30) + 1vw);
+	top: calc(30% + 1vw);
+	/* top: calc(calc(var(--vh) * 30) + 1vw); */
 	left: 7.5%;
 }
 
 .scroll {
 	width: 100%;
-	height: calc(60vh - 2vw);
-	height: calc(calc(var(--vh, 1vh) * 60) - 2vw);
+	/* height: calc(60vh - 2vw); */
+	height: calc(calc(var(--vh) * 64.8) - 2vw);
 	overflow: hidden;
 	perspective: 1000;
 }
@@ -216,16 +339,16 @@ section {
 /*  Dentro Section  */
 .line {
 	border-top: solid max(3px, 0.3vw) #e1b100;
-	width: min(44vh, 70%);
+	width: min(calc(var(--vh) * 47.5), 70%);
 	margin: 0 auto;
 }
 
 .cuenta-regresiva {
-	width: 10vh;
-	height: 10vh;
-	padding: 3vh;
+	width: calc(var(--vh) * 10.8);
+	height: calc(var(--vh) * 10.8);
+	padding: calc(var(--vh) * 3.24);
 	margin: 0 auto;
-	margin-top: 5vh;
+	margin-top: calc(var(--vh) * 5.4);
 	border: solid 3px #e1b100;
 	border-radius: 50%;
 	display: flex;
@@ -235,11 +358,11 @@ section {
 }
 
 .cuenta-regresiva p {
-	font-size: 2vh;
+	font-size: calc(var(--vh) * 2.16);
 	font-family: "Montserrat", sans-serif;
 	color: #8a8a8a;
 	margin: 0;
-	margin-top: 0.4vh;
+	margin-top: calc(var(--vh) * 0.432);
 	line-height: 1.4;
 }
 
@@ -247,7 +370,7 @@ header {
 	width: 90%;
 	/* height: 5vh; */
 	margin: 0 5%;
-	margin-top: calc(12vh - 2vw);
+	margin-top: calc(calc(var(--vh) * 12.96) - 2vw);
 	text-align: center;
 
 	/* background-color: pink; */
@@ -294,7 +417,7 @@ header {
 	border: 1px solid #e1b100;
 	text-decoration: none;
 	text-transform: uppercase;
-	margin-top: 3vh;
+	margin-top: calc(var(--vh) * 3.24);
 }
 
 .btn:hover {
@@ -303,16 +426,16 @@ header {
 }
 
 #confirm {
-	margin-top: calc(10vh - 2vw);
+	margin-top: calc(calc(var(--vh) * 10.8) - 2vw);
 }
 
 #galeria {
-	margin-top: calc(7vh - 2vw);
-	margin-bottom: calc(3vh - 1vw);
+	margin-top: calc(calc(var(--vh) * 7.56) - 2vw);
+	margin-bottom: calc(calc(var(--vh) * 3.24) - 1vw);
 }
 
 .container {
-	width: min(38vh, 95%);
+	width: min(calc(var(--vh) * 41.04), 95%);
 	margin: 0 auto;
 	/* max-height: 48vh; */
 }
@@ -366,7 +489,7 @@ nav {
 	position: absolute;
 	bottom: 3px;
 	z-index: 0;
-	height: 5vh;
+	height: calc(var(--vh) * 5.4);
 	width: 100%;
 }
 
@@ -444,7 +567,7 @@ a.active {
 .myLink {
 	position: absolute;
 	bottom: 5px;
-	font-size: min(17px, calc(1vh + 1vw));
+	font-size: min(17px, calc(calc(var(--vh) * 1.08) + 1vw));
 	width: 100%;
 	text-align: center;
 }
