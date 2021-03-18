@@ -59,9 +59,9 @@
 						top="0"
 						transform-box="fill-box"
 						version="1.1"
-						viewBox="0 0 100% 100%"
+						viewBox="0 0 100% 100vh"
 						width="100%"
-						height="100%"
+						height="100vh"
 						fill="none"
 						stroke="white"
 						stroke-width="3px"
@@ -75,8 +75,8 @@
 							viewBox="0 0 1300 600"
 							fill="none"
 							stroke="none"
-							id="nombre_mavi"
 							width="min(45vh, calc(35vh + 10%))"
+							id="nombre_mavi"
 						>
 							<defs>
 								<mask id="mask_mavi">
@@ -105,7 +105,7 @@
 							/>
 						</symbol>
 						<symbol
-							id="mis_quince"
+							id="mis_quinces"
 							viewBox="0 0 582.374 77.344"
 							width="min(80%, 55vh)"
 							xmlns="http://www.w3.org/2000/svg"
@@ -132,13 +132,12 @@
 									stroke="white"
 								></rect>
 								<rect
-									id="mask_marcoB"
+									height="100vh"
+									width="calc(41vh + 3%)"
+									x="calc((100% - calc(41vh + 3%))/2)"
+									y="0"
 									fill="black"
 									stroke="black"
-									width="calc(41vh + 3%)"
-									height="100vh"
-									x="0"
-									y="0"
 								></rect>
 							</mask>
 							<mask id="mask_marco_gold">
@@ -152,35 +151,36 @@
 									stroke="white"
 								></rect>
 								<rect
-									id="mask_marco_goldB"
-									fill="black"
-									stroke="black"
 									height="100vh"
 									width="calc(41vh + 3%)"
-									x="0"
+									x="calc((100% - calc(41vh + 3%))/2)"
 									y="0"
+									fill="black"
+									stroke="black"
 								></rect>
 							</mask>
 						</defs>
 						<use
 							xlink:href="#nombre_mavi"
-							id="mavi_white_use"
-							x="0"
-							y="0"
+							id="mavi_white"
+							x="calc((101% - min(45vh, calc(35vh + 10%)))/2)"
+							y="calc(-40vh + 1vw)"
 						></use>
-						<use xlink:href="#mis_quince" id="mis_quince_use" x="0" y="0"></use>
+						<use
+							xlink:href="#mis_quinces"
+							x="max(10%, calc((100% - 55vh)/2))"
+							y="calc(-26vh + 1vw)"
+						></use>
 						<rect
 							mask="url(#mask_marco)"
-							id="marco_use"
 							stroke-width="max(3px, 0.3vw)"
-							height="calc(87vh - 1vw)"
 							width="calc(100% - 8em)"
+							height="calc(87vh - 1vw)"
 							x="4em"
 							y="calc(10vh + 1vw)"
 						></rect>
 						<rect
 							mask="url(#mask_marco_gold)"
-							id="marco_gold_use"
 							stroke="#e1b100"
 							stroke-width="max(3px, 0.3vw)"
 							width="calc(100% - 8em)"
