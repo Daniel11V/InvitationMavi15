@@ -1,0 +1,448 @@
+.firstAnimation {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+	background: url(../img/white_wood.jpg) #eaebeb;
+	background-repeat: repeat-x;
+	background-size: auto 100vh;
+	z-index: 1;
+
+	/* -webkit-animation: resetBody 0.1s 7.8s forwards;
+	-o-animation: resetBody 0.1s 7.8s forwards;
+	-moz-animation: resetBody 0.1s 7.8s forwards;
+	animation: resetBody 0.1s 7.8s forwards; */
+
+	-webkit-animation: endCard 0.4s 7.9s forwards;
+	-o-animation: endCard 0.4s 7.9s forwards;
+	-moz-animation: endCard 0.4s 7.9s forwards;
+	animation: endCard 0.4s 7.9s forwards;
+}
+
+.envelope {
+	position: absolute;
+	height: 48em;
+	width: 72em;
+	background: var(--white_envelope);
+	top: 156vh;
+	left: 0;
+	right: 0;
+	margin: 13em auto 0;
+	box-shadow: 0px 1px 8px -2px #000000;
+	z-index: 1;
+
+	-webkit-animation: arriveCard 2.2s 0.5s ease-in-out forwards;
+	-o-animation: arriveCard 2.2s 0.5s ease-in-out forwards;
+	-moz-animation: arriveCard 2.2s 0.5s ease-in-out forwards;
+	animation: arriveCard 2.2s 0.5s ease-in-out forwards;
+}
+
+.mail_left,
+.mail_right,
+.mail_bottom {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	display: block;
+	background: var(--white_envelope);
+	width: 36.2em;
+	height: 48em;
+	z-index: 3;
+}
+
+.mail_left {
+	left: 0;
+	clip-path: polygon(0 0, 0 100%, 100% 50%);
+}
+
+.mail_right {
+	right: 0;
+	clip-path: polygon(0 50%, 100% 0, 100% 100%);
+}
+
+.mail_bottom {
+	width: 72em;
+	bottom: 0;
+	clip-path: polygon(0 100%, 50% 50%, 100% 100%);
+	box-shadow: 0px 3px 8px -2px #000000;
+	z-index: 4;
+}
+
+.mail_bottom_shadow {
+	filter: drop-shadow(0 5px 9px rgba(0, 0, 0, 0.5));
+	position: absolute;
+	bottom: 0%;
+	z-index: 4;
+}
+
+.mail_top {
+	width: 50.91em;
+	position: absolute;
+}
+
+.mail_top::before {
+	content: "";
+	display: block;
+	padding-top: 100%;
+	background: var(--white_envelope);
+	clip-path: polygon(0 0, 0 100%, 100% 100%);
+	transform-origin: 0% 0%;
+	transform: rotate(-45deg);
+	border-bottom-left-radius: 3.5em;
+	z-index: 4;
+
+	-webkit-animation: foldUpWhite 1.8s 1.5s ease-in-out forwards;
+	-o-animation: foldUpWhite 1.8s 1.5s ease-in-out forwards;
+	-moz-animation: foldUpWhite 1.8s 1.5s ease-in-out forwards;
+	animation: foldUpWhite 1.8s 1.5s ease-in-out forwards;
+}
+
+.mail_top_shadow {
+	filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5));
+	position: absolute;
+	top: 0%;
+	z-index: 4;
+
+	-webkit-animation: foldUpShadow 1.8s 1.5s ease-in-out forwards;
+	-o-animation: foldUpShadow 1.8s 1.5s ease-in-out forwards;
+	-moz-animation: foldUpShadow 1.8s 1.5s ease-in-out forwards;
+	animation: foldUpShadow 1.8s 1.5s ease-in-out forwards;
+}
+
+.envelope_cover {
+	width: 90%;
+	height: 90%;
+	margin: 0 5%;
+	background: var(--gold_envelope);
+	z-index: 1;
+}
+
+.envelope_cover::after {
+	content: "";
+	display: block;
+	padding-top: 100%;
+	clip-path: polygon(0 0, 45.82em 0, 0 45.82em);
+	transform-origin: center 13.3em;
+	transform: translate(-13.4em, -13.3em) rotate(-135deg);
+	border-top-left-radius: 2em;
+
+	-webkit-animation: foldUpGold 1.8s 1.5s ease-in-out forwards;
+	-o-animation: foldUpGold 1.8s 1.5s ease-in-out forwards;
+	-moz-animation: foldUpGold 1.8s 1.5s ease-in-out forwards;
+	animation: foldUpGold 1.8s 1.5s ease-in-out forwards;
+}
+
+.paper {
+	width: 66em;
+	height: 44em;
+	position: absolute;
+	left: 3em;
+	top: 2em;
+	background: var(--white_paper_up);
+	z-index: 2;
+
+	-webkit-animation: paperUp 1.3s 2.9s ease-in-out forwards,
+		paperTransform 2.5s 5.2s ease-in forwards, endCard 0.4s 8.2s forwards;
+	-o-animation: paperUp 1.3s 2.9s ease-in-out forwards,
+		paperTransform 2.5s 5.2s ease-in forwards, endCard 0.4s 8.2s forwards;
+	-moz-animation: paperUp 1.3s 2.9s ease-in-out forwards,
+		paperTransform 2.5s 5.2s ease-in forwards, endCard 0.4s 8.2s forwards;
+	animation: paperUp 1.3s 2.9s ease-in-out forwards,
+		paperTransform 2.5s 5.2s ease-in forwards, endCard 0.4s 8.2s forwards;
+}
+
+@media (min-width: 2000px) {
+	.paper {
+		-webkit-animation: paperUp2000 1.3s 2.9s ease-in-out forwards,
+			paperTransform2000 2.5s 5.2s ease-in forwards, endCard 0.4s 8.2s forwards;
+		-o-animation: paperUp2000 1.3s 2.9s ease-in-out forwards,
+			paperTransform2000 2.5s 5.2s ease-in forwards, endCard 0.4s 8.2s forwards;
+		-moz-animation: paperUp2000 1.3s 2.9s ease-in-out forwards,
+			paperTransform2000 2.5s 5.2s ease-in forwards, endCard 0.4s 8.2s forwards;
+		animation: paperUp2000 1.3s 2.9s ease-in-out forwards,
+			paperTransform2000 2.5s 5.2s ease-in forwards, endCard 0.4s 8.2s forwards;
+	}
+}
+
+.newBody {
+	height: calc(100% - 15em);
+	margin: 3em;
+	border: solid 0.5em rgba(77, 77, 77, 0.589);
+	padding: 5.5em 0 2em 0;
+
+	-webkit-animation: newBodyTransform 0.5s 5.7s easy-in-out forwards;
+	-o-animation: newBodyTransform 0.5s 5.7s easy-in-out forwards;
+	-moz-animation: newBodyTransform 0.5s 5.7s easy-in-out forwards;
+	animation: newBodyTransform 0.5s 5.7s easy-in-out forwards;
+}
+
+.newBody p {
+	font-family: "Parisienne", cursive;
+	font-size: 9em;
+	margin: 0 0.5em;
+	color: #8a8a8a;
+	text-align: center;
+
+	-webkit-animation: pTransform 0.5s 5.7s ease-in-out forwards;
+	-o-animation: pTransform 0.5s 5.7s ease-in-out forwards;
+	-moz-animation: pTransform 0.5s 5.7s ease-in-out forwards;
+	animation: pTransform 0.5s 5.7s ease-in-out forwards;
+}
+
+/* Confetti */
+.confetti {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 98%;
+	height: 100vh;
+	z-index: 20;
+
+	-webkit-animation: endCard 0.4s 7.9s forwards;
+	-o-animation: endCard 0.4s 7.9s forwards;
+	-moz-animation: endCard 0.4s 7.9s forwards;
+	animation: endCard 0.4s 7.9s forwards;
+}
+
+.confetti .particle {
+	opacity: 0;
+	position: absolute;
+	-webkit-animation: confetti 3s ease-in;
+	-o-animation: confetti 3s ease-in;
+	-moz-animation: confetti 3s ease-in;
+	animation: confetti 3s ease-in;
+}
+
+.c1 {
+	background-color: rgba(76, 175, 80, 0.5);
+}
+
+.c2 {
+	background-color: rgba(156, 39, 176, 0.5);
+}
+
+/* ANIMATIONS */
+@keyframes arriveCard {
+	from {
+		top: 156vh;
+	}
+	35% {
+		top: 21vh;
+	}
+	60% {
+		top: 35vh;
+	}
+	to {
+		top: 30vh;
+	}
+}
+
+@keyframes foldUpWhite {
+	from {
+		transform: rotateX(0deg) rotate(-45deg);
+	}
+	to {
+		transform: rotateX(180deg) rotate(-45deg);
+	}
+}
+
+@keyframes foldUpShadow {
+	from {
+		filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5));
+		z-index: 4;
+	}
+	48% {
+		z-index: 4;
+	}
+	49.5% {
+		z-index: 0;
+	}
+	to {
+		filter: drop-shadow(0 5px 10px rgba(0, 0, 200, 0));
+		z-index: 0;
+	}
+}
+
+@keyframes foldUpGold {
+	from {
+		background: transparent;
+		transform: translate(-13.4em, -13.3em) rotateX(0deg) rotate(-135deg);
+	}
+	49.5% {
+		background: transparent;
+	}
+	50% {
+		background: var(--gold_envelope);
+	}
+	to {
+		background: var(--gold_envelope);
+		transform: translate(-13.4em, -13.3em) rotateX(180deg) rotate(-135deg);
+	}
+}
+
+@keyframes confetti {
+	0% {
+		opacity: 0;
+		transform: translateY(2500%) rotate(0deg);
+	}
+	5% {
+		opacity: 1;
+	}
+	15% {
+		transform: translateY(-6000%) rotate(270deg);
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(7000%) rotate(1440deg);
+	}
+}
+
+@keyframes paperUp {
+	from {
+		position: fixed;
+		top: calc(30vh + 15em);
+		right: 0;
+		left: 0;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	35% {
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		margin-right: auto;
+		margin-left: auto;
+
+		box-shadow: 1px 1px 11px -2px #00000000;
+		transform: scale(1);
+		z-index: 2;
+	}
+	40% {
+		z-index: 18;
+	}
+	100% {
+		position: fixed;
+		top: calc(50% - 22em);
+		right: 0;
+		left: 0;
+		margin-right: auto;
+		margin-left: auto;
+
+		box-shadow: 1px 1px 11px -2px #000000;
+		transform: scale(1.4);
+		z-index: 18;
+	}
+}
+
+@keyframes paperUp2000 {
+	from {
+		position: fixed;
+		top: calc(30vh + 15em);
+		right: 0;
+		left: 0;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	35% {
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		margin-right: auto;
+		margin-left: auto;
+
+		box-shadow: 1px 1px 11px -2px #00000000;
+		transform: scale(1);
+		z-index: 2;
+	}
+	40% {
+		z-index: 18;
+	}
+	100% {
+		position: fixed;
+		top: calc(50% - 22em);
+		right: 0;
+		left: 0;
+		margin-right: auto;
+		margin-left: auto;
+
+		box-shadow: 1px 1px 11px -2px #000000;
+		transform: scale(2);
+		z-index: 18;
+	}
+}
+
+@keyframes paperTransform {
+	from {
+		transform: scale(1.4) rotateY(0deg);
+	}
+	85% {
+		width: 66em;
+		height: 44em;
+		top: calc(50% - 22em);
+		box-shadow: 1px 1px 11px -2px #000000;
+		transform: scale(1.4) rotateY(900);
+	}
+	to {
+		width: 100vw;
+		height: 100%;
+		top: 0;
+		box-shadow: 1px 1px 11px -2px #00000000;
+		transform: scale(1.4) rotateY(1800deg);
+	}
+}
+
+@keyframes paperTransform2000 {
+	from {
+		transform: scale(2) rotateY(0deg);
+	}
+	85% {
+		width: 66em;
+		height: 44em;
+		top: calc(50% - 22em);
+		box-shadow: 1px 1px 11px -2px #000000;
+		transform: scale(2) rotateY(900);
+	}
+	to {
+		width: 100vw;
+		height: 100%;
+		top: 0;
+		box-shadow: 1px 1px 11px -2px #00000000;
+		transform: scale(2) rotateY(1800deg);
+	}
+}
+
+@keyframes newBodyTransform {
+	from {
+		border: solid 0.5em rgba(77, 77, 77, 0.589);
+	}
+	95% {
+		margin: 3em;
+		padding: 7em 0;
+		border: solid 0.5em rgba(77, 77, 77, 0);
+	}
+	to {
+		border: none;
+		padding: 0;
+		margin: 0;
+	}
+}
+@keyframes pTransform {
+	to {
+		color: transparent;
+		display: none;
+	}
+}
+@keyframes endCard {
+	50% {
+		top: -156vh;
+	}
+	to {
+		top: -156vh;
+		opacity: 0;
+	}
+}
