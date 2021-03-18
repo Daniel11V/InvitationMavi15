@@ -8,15 +8,15 @@
 	background-size: auto 100vh;
 	z-index: 1;
 
-	/* -webkit-animation: resetBody 0.1s 7.8s forwards;
-	-o-animation: resetBody 0.1s 7.8s forwards;
-	-moz-animation: resetBody 0.1s 7.8s forwards;
-	animation: resetBody 0.1s 7.8s forwards; */
+	/* -webkit-animation: resetBody 0.1s 8.8s forwards;
+	-o-animation: resetBody 0.1s 8.8s forwards;
+	-moz-animation: resetBody 0.1s 8.8s forwards;
+	animation: resetBody 0.1s 8.8s forwards; */
 
-	-webkit-animation: endCard 0.4s 7.9s forwards;
-	-o-animation: endCard 0.4s 7.9s forwards;
-	-moz-animation: endCard 0.4s 7.9s forwards;
-	animation: endCard 0.4s 7.9s forwards;
+	-webkit-animation: endCard 0.4s 8.9s forwards;
+	-o-animation: endCard 0.4s 8.9s forwards;
+	-moz-animation: endCard 0.4s 8.9s forwards;
+	animation: endCard 0.4s 8.9s forwards;
 }
 
 .envelope {
@@ -142,25 +142,25 @@
 	z-index: 2;
 
 	-webkit-animation: paperUp 1.3s 2.9s ease-in-out forwards,
-		paperTransform 2.5s 5.2s ease-in forwards, endCard 0.4s 8.2s forwards;
+		paperTransform 2.5s 6.2s ease-in forwards, endCard 0.4s 9.2s forwards;
 	-o-animation: paperUp 1.3s 2.9s ease-in-out forwards,
-		paperTransform 2.5s 5.2s ease-in forwards, endCard 0.4s 8.2s forwards;
+		paperTransform 2.5s 6.2s ease-in forwards, endCard 0.4s 9.2s forwards;
 	-moz-animation: paperUp 1.3s 2.9s ease-in-out forwards,
-		paperTransform 2.5s 5.2s ease-in forwards, endCard 0.4s 8.2s forwards;
+		paperTransform 2.5s 6.2s ease-in forwards, endCard 0.4s 9.2s forwards;
 	animation: paperUp 1.3s 2.9s ease-in-out forwards,
-		paperTransform 2.5s 5.2s ease-in forwards, endCard 0.4s 8.2s forwards;
+		paperTransform 2.5s 6.2s ease-in forwards, endCard 0.4s 9.2s forwards;
 }
 
 @media (min-width: 2000px) {
 	.paper {
 		-webkit-animation: paperUp2000 1.3s 2.9s ease-in-out forwards,
-			paperTransform2000 2.5s 5.2s ease-in forwards, endCard 0.4s 8.2s forwards;
+			paperTransform2000 2.5s 6.2s ease-in forwards, endCard 0.4s 9.2s forwards;
 		-o-animation: paperUp2000 1.3s 2.9s ease-in-out forwards,
-			paperTransform2000 2.5s 5.2s ease-in forwards, endCard 0.4s 8.2s forwards;
+			paperTransform2000 2.5s 6.2s ease-in forwards, endCard 0.4s 9.2s forwards;
 		-moz-animation: paperUp2000 1.3s 2.9s ease-in-out forwards,
-			paperTransform2000 2.5s 5.2s ease-in forwards, endCard 0.4s 8.2s forwards;
+			paperTransform2000 2.5s 6.2s ease-in forwards, endCard 0.4s 9.2s forwards;
 		animation: paperUp2000 1.3s 2.9s ease-in-out forwards,
-			paperTransform2000 2.5s 5.2s ease-in forwards, endCard 0.4s 8.2s forwards;
+			paperTransform2000 2.5s 6.2s ease-in forwards, endCard 0.4s 9.2s forwards;
 	}
 }
 
@@ -170,10 +170,10 @@
 	border: solid 0.5em rgba(77, 77, 77, 0.589);
 	padding: 5.5em 0 2em 0;
 
-	-webkit-animation: newBodyTransform 0.5s 5.7s easy-in-out forwards;
-	-o-animation: newBodyTransform 0.5s 5.7s easy-in-out forwards;
-	-moz-animation: newBodyTransform 0.5s 5.7s easy-in-out forwards;
-	animation: newBodyTransform 0.5s 5.7s easy-in-out forwards;
+	-webkit-animation: newBodyTransform 0.5s 6.7s easy-in-out forwards;
+	-o-animation: newBodyTransform 0.5s 6.7s easy-in-out forwards;
+	-moz-animation: newBodyTransform 0.5s 6.7s easy-in-out forwards;
+	animation: newBodyTransform 0.5s 6.7s easy-in-out forwards;
 }
 
 .newBody p {
@@ -183,10 +183,10 @@
 	color: #8a8a8a;
 	text-align: center;
 
-	-webkit-animation: pTransform 0.5s 5.7s ease-in-out forwards;
-	-o-animation: pTransform 0.5s 5.7s ease-in-out forwards;
-	-moz-animation: pTransform 0.5s 5.7s ease-in-out forwards;
-	animation: pTransform 0.5s 5.7s ease-in-out forwards;
+	-webkit-animation: pTransform 0.5s 6.7s ease-in-out forwards;
+	-o-animation: pTransform 0.5s 6.7s ease-in-out forwards;
+	-moz-animation: pTransform 0.5s 6.7s ease-in-out forwards;
+	animation: pTransform 0.5s 6.7s ease-in-out forwards;
 }
 
 /* Confetti */
@@ -198,10 +198,10 @@
 	height: 100vh;
 	z-index: 20;
 
-	-webkit-animation: endCard 0.4s 7.9s forwards;
-	-o-animation: endCard 0.4s 7.9s forwards;
-	-moz-animation: endCard 0.4s 7.9s forwards;
-	animation: endCard 0.4s 7.9s forwards;
+	-webkit-animation: endCard 0.4s 8.9s forwards;
+	-o-animation: endCard 0.4s 8.9s forwards;
+	-moz-animation: endCard 0.4s 8.9s forwards;
+	animation: endCard 0.4s 8.9s forwards;
 }
 
 .confetti .particle {

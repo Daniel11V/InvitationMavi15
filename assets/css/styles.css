@@ -10,7 +10,8 @@ body {
 	height: 100%;
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+/* Try Lock Portrait */
+/* @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
 	html {
 		transform: rotate(-90deg);
 		transform-origin: left top;
@@ -20,11 +21,10 @@ body {
 		top: 100%;
 		left: 0;
 	}
-}
+} */
 
 body {
 	width: 100%;
-	/* height: 100vh; */
 	margin: 0;
 	background: var(--white_envelope);
 	overflow-y: hidden;
@@ -32,10 +32,10 @@ body {
 	font-size: 0.4vw;
 	z-index: 0;
 
-	-webkit-animation: bodyScroll 0.1s 8s ease-in-out forwards;
-	-o-animation: bodyScroll 0.1s 8s ease-in-out forwards;
-	-moz-animation: bodyScroll 0.1s 8s ease-in-out forwards;
-	animation: bodyScroll 0.1s 8s ease-in-out forwards;
+	-webkit-animation: bodyScroll 0.1s 9s ease-in-out forwards;
+	-o-animation: bodyScroll 0.1s 9s ease-in-out forwards;
+	-moz-animation: bodyScroll 0.1s 9s ease-in-out forwards;
+	animation: bodyScroll 0.1s 9s ease-in-out forwards;
 }
 
 @media (max-width: 2300px) {
@@ -57,7 +57,7 @@ body {
 }
 
 .imgPortada {
-	height: 110vh;
+	height: 110%;
 	width: 100%;
 	position: relative;
 	top: 0;
@@ -77,10 +77,10 @@ body {
 	-moz-box-shadow: inset 0px -2px 6px -1px black;
 	box-shadow: inset 0px -2px 6px -1px black;
 
-	-webkit-animation: appear 3s 8.5s ease-in-out forwards;
-	-o-animation: appear 3s 8.5s ease-in-out forwards;
-	-moz-animation: appear 3s 8.5s ease-in-out forwards;
-	animation: appear 3s 8.5s ease-in-out forwards;
+	-webkit-animation: appear 3s 9.5s ease-in-out forwards;
+	-o-animation: appear 3s 9.5s ease-in-out forwards;
+	-moz-animation: appear 3s 9.5s ease-in-out forwards;
+	animation: appear 3s 9.5s ease-in-out forwards;
 }
 
 @media (min-width: 800px) {
@@ -98,31 +98,29 @@ body {
 
 .letter {
 	height: 100vh;
+	height: calc(var(--vh, 1vh) * 100);
 	width: 100%;
 	background-color: white;
 	position: relative;
 	/* z-index: 2; */
 }
 
-/* .sticky_effect {
-	position: relative;
-	top: calc(-35vh - 10vw);
-	min-height: calc(135vh + 10vw);
-	width: 100%;
-} */
-
 .sticky_effect {
 	position: absolute;
-	top: calc(-40vh - 1vw); /* top: -40vh; */
+	top: calc(-40vh - 1vw);
+	top: calc(calc(var(--vh, 1vh) * (-40)) - 1vw);
 	height: calc(140vh + 1vw);
+	height: calc(calc(var(--vh, 1vh) * 140) + 1vw);
 	width: 100%;
 }
 
 .letter_content {
 	height: 100vh;
+	height: calc(var(--vh, 1vh) * 100);
 	width: 100%;
 	position: sticky;
 	top: calc(70vh - 1vw);
+	top: calc(calc(var(--vh, 1vh) * 70) - 1vw);
 }
 
 /* .marcos {
@@ -144,10 +142,10 @@ body {
 	stroke-dasharray: 6000;
 	stroke-dashoffset: 6000;
 
-	-webkit-animation: animate-mavi 3.5s 8.3s ease-in forwards;
-	-o-animation: animate-mavi 3.5s 8.3s ease-in forwards;
-	-moz-animation: animate-mavi 3.5s 8.3s ease-in forwards;
-	animation: animate-mavi 3.5s 8.3s ease-in forwards;
+	-webkit-animation: animate-mavi 3.5s 9.3s ease-in forwards;
+	-o-animation: animate-mavi 3.5s 9.3s ease-in forwards;
+	-moz-animation: animate-mavi 3.5s 9.3s ease-in forwards;
+	animation: animate-mavi 3.5s 9.3s ease-in forwards;
 }
 
 .write2 {
@@ -155,10 +153,10 @@ body {
 	stroke-dashoffset: 6000;
 
 	/* 2.5s de diferencia */
-	-webkit-animation: animate-mavi 4.5s 10.8s ease-out forwards;
-	-o-animation: animate-mavi 4.5s 10.8s ease-out forwards;
-	-moz-animation: animate-mavi 4.5s 10.8s ease-out forwards;
-	animation: animate-mavi 4.5s 10.8s ease-out forwards;
+	-webkit-animation: animate-mavi 4.5s 11.8s ease-out forwards;
+	-o-animation: animate-mavi 4.5s 11.8s ease-out forwards;
+	-moz-animation: animate-mavi 4.5s 11.8s ease-out forwards;
+	animation: animate-mavi 4.5s 11.8s ease-out forwards;
 }
 
 #mavi_white {
@@ -175,10 +173,10 @@ body {
 	stroke-width: 0;
 	opacity: 0;
 
-	-webkit-animation: appear 2.5s 11.8s ease-out forwards;
-	-o-animation: appear 2.5s 11.8s ease-out forwards;
-	-moz-animation: appear 2.5s 11.8s ease-out forwards;
-	animation: appear 2.5s 11.8s ease-out forwards;
+	-webkit-animation: appear 2.5s 12.8s ease-out forwards;
+	-o-animation: appear 2.5s 12.8s ease-out forwards;
+	-moz-animation: appear 2.5s 12.8s ease-out forwards;
+	animation: appear 2.5s 12.8s ease-out forwards;
 }
 
 #mis_quince_gray {
@@ -188,14 +186,17 @@ body {
 .information {
 	width: 85%;
 	height: calc(66vh - 2vw);
+	height: calc(calc(var(--vh, 1vh) * 66) - 2vw);
 	position: absolute;
 	top: calc(30vh + 1vw);
+	top: calc(calc(var(--vh, 1vh) * 30) + 1vw);
 	left: 7.5%;
 }
 
 .scroll {
 	width: 100%;
 	height: calc(60vh - 2vw);
+	height: calc(calc(var(--vh, 1vh) * 60) - 2vw);
 	overflow: hidden;
 	perspective: 1000;
 }
@@ -303,7 +304,6 @@ header {
 
 #confirm {
 	margin-top: calc(10vh - 2vw);
-	/* margin-bottom: calc(3vh - 1vw); */
 }
 
 #galeria {
@@ -336,12 +336,6 @@ section.galeria .item-galeria {
 	width: 100%;
 }
 
-/* .row a {
-	color: #007bff;
-	text-decoration: none;
-	background-color: transparent;
-} */
-
 section.galeria .item-galeria a img {
 	transition: all 0.3s ease-out;
 	border-radius: 10px;
@@ -369,7 +363,6 @@ section.galeria .item-galeria a:hover img {
 
 /*  Nav  */
 nav {
-	/* background: hsla(0, 0, 0, 0.2); */
 	position: absolute;
 	bottom: 3px;
 	z-index: 0;
