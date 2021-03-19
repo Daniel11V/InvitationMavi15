@@ -3,6 +3,7 @@
 	--gold_envelope: url(../img/gold_texture.png) #e3ca6f;
 	--white_paper_up: #f2f2f2;
 	--white_paper_down: #b1b1b11a;
+	--gray: #a5a5a5;
 }
 
 body {
@@ -45,9 +46,6 @@ body {
 	top: 0;
 	left: 0;
 	background: url(../img/galeria/2.jpg) var(--white_paper_down);
-	/* background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center; */
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -65,24 +63,6 @@ body {
 	animation: appear 3s 9.5s ease-in-out forwards;
 }
 
-.imgPortadaFalse {
-	/* height: 100vh; */
-	/* height: -webkit-fill-available; */
-	height: calc(var(--vh) * 108);
-	width: 100%;
-	background-color: transparent;
-	background-size: cover;
-}
-
-.letter {
-	/* height: 100vh; */
-	height: calc(var(--vh, 1vh) * 108);
-	width: 100%;
-	background-color: white;
-	position: relative;
-	/* z-index: 2; */
-}
-
 @media (min-width: 800px) {
 	.imgPortada {
 		background: url(../img/galeria/4.jpg) var(--white_paper_down);
@@ -96,28 +76,66 @@ body {
 	}
 }
 
-@media (min-width: 500px) {
+.imgPortadaFalse {
+	height: calc(var(--vh) * 108);
+	width: 100%;
+	background-color: transparent;
+	background-size: cover;
+}
+
+.letter {
+	height: calc(var(--vh, 1vh) * 108);
+	width: 100%;
+	background-color: white;
+	position: relative;
+}
+
+/* @media (min-width: 500px) {
 	.letter {
 		height: calc(var(--vh, 1vh) * 100);
 	}
-}
+} */
 
 .sticky_effect {
-	position: absolute;
-	/* top: calc(-40vh - 1vw); */
-	top: calc(calc(var(--vh, 1vh) * (-40)) - 1vw);
-	/* height: calc(140vh + 1vw); */
-	height: calc(calc(var(--vh, 1vh) * 140) + 1vw);
+	position: relative;
+	top: calc(var(--vh, 1vh) * (-38));
+	height: calc(var(--vh, 1vh) * (146));
 	width: 100%;
 }
 
 .letter_content {
-	/* height: 100vh; */
 	height: calc(var(--vh, 1vh) * 100);
 	width: 100%;
 	position: sticky;
-	top: calc(70vh - 1vw);
-	top: calc(calc(var(--vh, 1vh) * 70) - 1vw);
+	top: calc(calc(var(--vh, 1vh) * 70));
+}
+
+.div_svg {
+	position: absolute;
+	transform-box: fill-box;
+}
+
+.div_marco {
+	width: calc(100% - 8em);
+	height: calc(94% - 7vw);
+	top: calc(32px + 7vw);
+	left: 4em;
+}
+
+.div_nombre_mavi {
+	width: 100%;
+	top: 0;
+	height: calc(12% + 8vw);
+	max-height: 195px;
+}
+
+.div_mis_quince {
+	width: 80%;
+	max-width: 500px;
+	top: calc(var(--vh, 1vh) * 11);
+	left: max(10%, calc((100% - 500px) / 2));
+	height: 30vw;
+	max-height: 249px;
 }
 
 .mask_mavi {
@@ -170,25 +188,24 @@ body {
 }
 
 #mis_quince_gray {
-	fill: #8a8a8a !important;
+	fill: #a5a5a5 !important;
 }
 
 .information {
 	width: 85%;
-	height: calc(66vh - 2vw);
-	/* height: calc(calc(var(--vh, 1vh) * 66) - 2vw); */
+	height: calc(70% - 8vw);
 	position: absolute;
-	top: calc(30vh + 1vw);
-	top: calc(calc(var(--vh, 1vh) * 30) + 1vw);
 	left: 7.5%;
+	bottom: 30px;
+	display: flex;
+	flex-direction: column;
 }
 
 .scroll {
 	width: 100%;
-	height: calc(60vh - 2vw);
-	height: calc(calc(var(--vh, 1vh) * 60) - 2vw);
 	overflow: hidden;
 	perspective: 1000;
+	flex: 1;
 }
 
 .sections {
@@ -227,7 +244,7 @@ section {
 .cuenta-regresiva p {
 	font-size: 2vh;
 	font-family: "Montserrat", sans-serif;
-	color: #8a8a8a;
+	color: var(--gray);
 	margin: 0;
 	margin-top: 0.4vh;
 	line-height: 1.4;
@@ -250,7 +267,7 @@ header {
 	font-size: min(4.2vw, 28px);
 	font-family: "Montserrat", sans-serif;
 	font-weight: 400;
-	color: #8a8a8a;
+	color: var(--gray);
 	text-align: center;
 }
 
@@ -300,7 +317,6 @@ header {
 .container {
 	width: min(38vh, 95%);
 	margin: 0 auto;
-	/* max-height: 48vh; */
 }
 
 .row {
@@ -349,10 +365,8 @@ section.galeria .item-galeria a:hover img {
 
 /*  Nav  */
 nav {
-	position: absolute;
-	bottom: 3px;
 	z-index: 0;
-	height: 5vh;
+	height: 10%;
 	width: 100%;
 }
 
@@ -385,7 +399,7 @@ ul {
 }
 
 a.active {
-	background-color: #8a8a8a;
+	background-color: var(--gray);
 	color: #ffffff;
 	font-weight: 500;
 }
@@ -433,11 +447,12 @@ a.active {
 	font-size: min(17px, calc(1vh + 1vw));
 	width: 100%;
 	text-align: center;
+	background-color: transparent;
 }
 
 .myLink a {
 	text-decoration: none;
-	color: #8a8a8a;
+	color: var(--gray);
 }
 
 @keyframes bodyScroll {
@@ -487,7 +502,7 @@ a.active {
 		color: #e1b100;
 	}
 	100% {
-		color: #8a8a8a;
+		color: var(--gray);
 	}
 }
 

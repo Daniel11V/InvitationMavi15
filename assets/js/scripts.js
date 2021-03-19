@@ -30,6 +30,12 @@ var x = setInterval(function () {
 	}
 }, 1000);
 
+////  Variable --vh
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty("--vh", `${vh}px`);
+
 ////  Confetti
 function confetti() {
 	$.each($(".confetti"), function () {
@@ -64,16 +70,16 @@ jQuery.rnd = function (m, n, decimales) {
 confetti();
 
 ////  Scroll Transform Gold
+let windowHeight = window.innerHeight;
+let windowHeight2 = $(window).height();
+
 window.onscroll = function () {
 	// console.log("Vertical: " + window.scrollY);
 	// console.log(900 - window.scrollY);
 
-	let letter_num =
-		($(window).height() * 1.1 - $(".letter_content").offset().top) /
-		($(window).height() * 0.4 + $(window).width() * 0.01);
+	let letter_num2 = windowHeight * 1.08 - $(".letter_content").offset().top;
 
-	let letter_num2 =
-		$(window).height() * 1.1 - $(".letter_content").offset().top;
+	let letter_num = letter_num2 / (windowHeight * 0.38);
 
 	// console.log("Letter: " + letter_num);
 	if (window.scrollY < 290) {
@@ -90,7 +96,8 @@ window.onscroll = function () {
 			.setAttribute("fill-opacity", 1 - letter_num);
 
 		// Unidad del svg
-		document.getElementById("marco_gold").setAttribute("y", letter_num2);
+		console.log("Letter: " + letter_num2);
+		document.getElementById("marco_gold").setAttribute("y", letter_num2 - 58);
 	}
 };
 
@@ -127,6 +134,7 @@ $(function () {
 	}
 
 	$("nav a").click(function (e) {
+		console.log("Click nav a");
 		// When link clicked, find slide it points to
 		var newslide = parseInt($(this).attr("href")[1]);
 		// find how far it is from current slide
@@ -136,6 +144,7 @@ $(function () {
 	});
 
 	$(window).resize(function () {
+		console.log("Resize");
 		// Keep current slide to left of window on resize
 		var displacment = $(window).width() * 0.85 * currSlide;
 		$slides.css("transform", "translateX(-" + displacment + "px)");
@@ -161,18 +170,13 @@ $(function () {
 
 	$body.bind("touchend", function (e) {
 		var te = e.originalEvent.changedTouches[0].clientX;
-		if (ts > te) {
+		console.log(ts, te);
+		if (ts - 15 > te) {
 			showSlide(1);
 			console.log("left");
-		} else {
+		} else if (te - 15 > ts) {
 			showSlide(-1);
 			console.log("right");
 		}
 	});
 });
-
-////  Variable --vh
-// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-let vh = window.innerHeight * 0.01;
-// Then we set the value in the --vh custom property to the root of the document
-document.documentElement.style.setProperty("--vh", `${vh}px`);
