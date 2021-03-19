@@ -79,7 +79,7 @@ window.onscroll = function () {
 	let letter_num = letter_num2 / (windowHeight * 0.38);
 
 	// console.log("Letter: " + letter_num);
-	if (window.scrollY < 290) {
+	if (window.scrollY < 300) {
 		document
 			.getElementById("mavi_gold")
 			.setAttribute("fill-opacity", 1 - letter_num);

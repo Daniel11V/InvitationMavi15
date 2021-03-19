@@ -194,7 +194,7 @@ body {
 
 .information {
 	width: 85%;
-	height: calc(70% - 8vw);
+	height: calc(70% - 10vw);
 	position: absolute;
 	left: 7.5%;
 	bottom: 30px;
@@ -205,7 +205,6 @@ body {
 .scroll {
 	width: 100%;
 	overflow: hidden;
-	perspective: 1000;
 	flex: 1;
 }
 
@@ -254,7 +253,7 @@ section {
 header {
 	width: 90%;
 	margin: 0 5%;
-	margin-top: calc(calc(var(--vh) * 12.96) - 2vw);
+	margin-top: calc(calc(var(--vh) * 12.96) - 4vw);
 	text-align: center;
 
 	font-size: min(46px, 7.2vw);

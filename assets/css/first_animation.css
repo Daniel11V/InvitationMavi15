@@ -141,6 +141,8 @@
 	background: var(--white_paper_up);
 	z-index: 2;
 
+	top: calc(50% - 22em);
+
 	-webkit-animation: paperUp 1.3s 2.9s ease-in-out forwards,
 		paperTransform 2.5s 6.2s ease-in forwards, endCard 0.4s 9.2s forwards;
 	-o-animation: paperUp 1.3s 2.9s ease-in-out forwards,
@@ -378,6 +380,10 @@
 
 @keyframes paperTransform {
 	from {
+		width: 66em;
+		height: 44em;
+		top: calc(50% - 22em);
+		box-shadow: 1px 1px 11px -2px #000000;
 		transform: scale(1.4) rotateY(0deg);
 	}
 	85% {
@@ -398,6 +404,10 @@
 
 @keyframes paperTransform2000 {
 	from {
+		width: 66em;
+		height: 44em;
+		top: calc(50% - 22em);
+		box-shadow: 1px 1px 11px -2px #000000;
 		transform: scale(2) rotateY(0deg);
 	}
 	85% {
