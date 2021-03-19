@@ -74,9 +74,6 @@ let windowHeight = window.innerHeight;
 let windowHeight2 = $(window).height();
 
 window.onscroll = function () {
-	// console.log("Vertical: " + window.scrollY);
-	// console.log(900 - window.scrollY);
-
 	let letter_num2 = windowHeight * 1.08 - $(".letter_content").offset().top;
 
 	let letter_num = letter_num2 / (windowHeight * 0.38);
@@ -96,7 +93,6 @@ window.onscroll = function () {
 			.setAttribute("fill-opacity", 1 - letter_num);
 
 		// Unidad del svg
-		console.log("Letter: " + letter_num2);
 		document.getElementById("marco_gold").setAttribute("y", letter_num2 - 58);
 	}
 };
@@ -134,7 +130,6 @@ $(function () {
 	}
 
 	$("nav a").click(function (e) {
-		console.log("Click nav a");
 		// When link clicked, find slide it points to
 		var newslide = parseInt($(this).attr("href")[1]);
 		// find how far it is from current slide
@@ -144,7 +139,6 @@ $(function () {
 	});
 
 	$(window).resize(function () {
-		console.log("Resize");
 		// Keep current slide to left of window on resize
 		var displacment = $(window).width() * 0.85 * currSlide;
 		$slides.css("transform", "translateX(-" + displacment + "px)");
@@ -170,13 +164,10 @@ $(function () {
 
 	$body.bind("touchend", function (e) {
 		var te = e.originalEvent.changedTouches[0].clientX;
-		console.log(ts, te);
 		if (ts - 15 > te) {
 			showSlide(1);
-			console.log("left");
 		} else if (te - 15 > ts) {
 			showSlide(-1);
-			console.log("right");
 		}
 	});
 });
