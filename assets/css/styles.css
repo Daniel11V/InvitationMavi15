@@ -4,6 +4,7 @@
 	--white_paper_up: #f2f2f2;
 	--white_paper_down: #b1b1b11a;
 	--gray: #a5a5a5;
+	--gold: #e1b100;
 }
 
 body {
@@ -172,11 +173,11 @@ body {
 }
 
 #mavi_gold {
-	fill: #e1b100;
+	fill: var(--gold);
 }
 
 #mis_quinces path {
-	fill: #e1b100;
+	fill: var(--gold);
 	fill-rule: evenodd;
 	stroke-width: 0;
 	opacity: 0;
@@ -188,7 +189,7 @@ body {
 }
 
 #mis_quince_gray {
-	fill: #a5a5a5 !important;
+	fill: var(--gray) !important;
 }
 
 .information {
@@ -222,18 +223,18 @@ section {
 
 /*  Dentro Section  */
 .line {
-	border-top: solid max(3px, 0.3vw) #e1b100;
-	width: min(44vh, 70%);
+	border-top: solid max(3px, 0.3vw) var(--gold);
+	width: min(calc(var(--vh) * 44), 70%);
 	margin: 0 auto;
 }
 
 .cuenta-regresiva {
-	width: 10vh;
-	height: 10vh;
-	padding: 3vh;
+	width: calc(var(--vh) * 10.8);
+	height: calc(var(--vh) * 10.8);
+	padding: calc(var(--vh) * 3.24);
 	margin: 0 auto;
-	margin-top: 5vh;
-	border: solid 3px #e1b100;
+	margin-top: calc(var(--vh) * 5.4);
+	border: solid 3px var(--gold);
 	border-radius: 50%;
 	display: flex;
 	flex-direction: column;
@@ -242,18 +243,18 @@ section {
 }
 
 .cuenta-regresiva p {
-	font-size: 2vh;
+	font-size: calc(var(--vh) * 2.16);
 	font-family: "Montserrat", sans-serif;
 	color: var(--gray);
 	margin: 0;
-	margin-top: 0.4vh;
+	margin-top: calc(var(--vh) * 0.432);
 	line-height: 1.4;
 }
 
 header {
 	width: 90%;
 	margin: 0 5%;
-	margin-top: calc(12vh - 2vw);
+	margin-top: calc(calc(var(--vh) * 12.96) - 2vw);
 	text-align: center;
 
 	font-size: min(46px, 7.2vw);
@@ -291,31 +292,31 @@ header {
 		border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
 	color: white;
-	background-color: #e1b100;
+	background-color: var(--gold);
 	border-radius: 30px;
 	padding: 10px 40px;
-	border: 1px solid #e1b100;
+	border: 1px solid var(--gold);
 	text-decoration: none;
 	text-transform: uppercase;
-	margin-top: 3vh;
+	margin-top: calc(var(--vh) * 3.24);
 }
 
 .btn:hover {
-	color: #e1b100;
+	color: var(--gold);
 	background-color: white;
 }
 
 #confirm {
-	margin-top: calc(10vh - 2vw);
+	margin-top: calc(calc(var(--vh) * 10.8) - 2vw);
 }
 
 #galeria {
-	margin-top: calc(7vh - 2vw);
-	margin-bottom: calc(3vh - 1vw);
+	margin-top: calc(calc(var(--vh) * 7.56) - 2vw);
+	margin-bottom: calc(calc(var(--vh) * 3.24) - 1vw);
 }
 
 .container {
-	width: min(38vh, 95%);
+	width: min(calc(var(--vh) * 41.04), 95%);
 	margin: 0 auto;
 }
 
@@ -412,7 +413,7 @@ a.active {
 	bottom: 0;
 	left: 0;
 	opacity: 0;
-	background-color: #e1b100;
+	background-color: var(--gold);
 	z-index: -1;
 }
 
@@ -444,7 +445,7 @@ a.active {
 .myLink {
 	position: absolute;
 	bottom: 5px;
-	font-size: min(17px, calc(1vh + 1vw));
+	font-size: min(17px, calc(calc(var(--vh) * 1.08) + 1vw));
 	width: 100%;
 	text-align: center;
 	background-color: transparent;
@@ -490,16 +491,16 @@ a.active {
 	100% {
 		width: 100%;
 		height: 100%;
-		background: #e1b100;
+		background: var(--gold);
 	}
 }
 
 @keyframes fillColour {
 	0% {
-		color: #e1b100;
+		color: var(--gold);
 	}
 	50% {
-		color: #e1b100;
+		color: var(--gold);
 	}
 	100% {
 		color: var(--gray);
@@ -508,10 +509,10 @@ a.active {
 
 @keyframes fillColour2 {
 	0% {
-		color: #e1b100;
+		color: var(--gold);
 	}
 	50% {
-		color: #e1b100;
+		color: var(--gold);
 	}
 	100% {
 		color: #ffffff;
