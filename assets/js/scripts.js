@@ -1,3 +1,16 @@
+////  Detectar Si Navegador Es Chrome
+
+// document.getElementById("firstAnimation").remove();
+// document.documentElement.style.setProperty("--time-chrome", `9s`);
+if (navigator.userAgent.toLowerCase().indexOf("chrome") > -1) {
+	// alert("El navegador que se está utilizando es Chrome");
+	document.documentElement.style.setProperty("--time-chrome", `0s`);
+} else {
+	// alert("El navegador que se está utilizando NO es Chrome");
+	document.getElementById("firstAnimation").remove();
+	document.documentElement.style.setProperty("--time-chrome", `9s`);
+}
+
 ////  Cuenta regresiva
 var fechaCuentaRegresiva = "04/03/2021 21:00:00";
 
