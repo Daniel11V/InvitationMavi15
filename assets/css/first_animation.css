@@ -1,9 +1,10 @@
-.firstAnimation {
+#firstAnimation {
 	position: fixed;
 	width: 100%;
 	height: 100vh;
 	margin: 0;
-	background: url(../img/white_wood.jpg) #eaebeb;
+	background-color: #eaebeb;
+	background: url(../img/white_wood.jpg);
 	background-repeat: repeat-x;
 	background-size: auto 100vh;
 	z-index: 1;
@@ -172,18 +173,22 @@
 	border: solid 0.5em rgba(77, 77, 77, 0.589);
 	padding: 5.5em 0 2em 0;
 
-	-webkit-animation: newBodyTransform 0.5s 6.7s easy-in-out forwards;
-	-o-animation: newBodyTransform 0.5s 6.7s easy-in-out forwards;
-	-moz-animation: newBodyTransform 0.5s 6.7s easy-in-out forwards;
-	animation: newBodyTransform 0.5s 6.7s easy-in-out forwards;
+	-webkit-animation: newBodyTransform 0.5s 6.7s ease-in-out forwards;
+	-o-animation: newBodyTransform 0.5s 6.7s ease-in-out forwards;
+	-moz-animation: newBodyTransform 0.5s 6.7s ease-in-out forwards;
+	animation: newBodyTransform 0.5s 6.7s ease-in-out forwards;
 }
 
 .newBody p {
 	font-family: "Parisienne", cursive;
-	font-size: 9em;
-	margin: 0 0.5em;
+	/* font-family: "Courier New", Courier, monospace; */
+	/* font-family: Georgia, "Times New Roman", Times, serif; */
+	/* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
+	margin: 0;
+	/* margin-top: 0.3em; */
 	color: #8a8a8a;
 	text-align: center;
+	font-size: 8.5em;
 
 	-webkit-animation: pTransform 0.5s 6.7s ease-in-out forwards;
 	-o-animation: pTransform 0.5s 6.7s ease-in-out forwards;
@@ -391,7 +396,7 @@
 		height: 44em;
 		top: calc(50% - 22em);
 		box-shadow: 1px 1px 11px -2px #000000;
-		transform: scale(1.4) rotateY(900);
+		transform: scale(1.4) rotateY(800deg);
 	}
 	to {
 		width: 100vw;
@@ -415,7 +420,7 @@
 		height: 44em;
 		top: calc(50% - 22em);
 		box-shadow: 1px 1px 11px -2px #000000;
-		transform: scale(2) rotateY(900);
+		transform: scale(2) rotateY(800deg);
 	}
 	to {
 		width: 100vw;

@@ -1,5 +1,5 @@
 ////  Cuenta regresiva
-var fechaCuentaRegresiva = "04/03/2021 17:00:00";
+var fechaCuentaRegresiva = "04/03/2021 21:00:00";
 
 // Set the date we're counting down to
 var countDownDate = new Date(fechaCuentaRegresiva).getTime();
@@ -30,11 +30,17 @@ var x = setInterval(function () {
 	}
 }, 1000);
 
-////  Variable --vh
-// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-let vh = window.innerHeight * 0.01;
-// Then we set the value in the --vh custom property to the root of the document
-document.documentElement.style.setProperty("--vh", `${vh}px`);
+////  Variable --vh y --vw
+
+document.documentElement.style.setProperty(
+	"--vh",
+	`${window.innerHeight * 0.01}px`
+);
+
+document.documentElement.style.setProperty(
+	"--vw",
+	`${window.innerWidth * 0.01}`
+);
 
 ////  Confetti
 function confetti() {
@@ -73,27 +79,38 @@ confetti();
 let windowHeight = window.innerHeight;
 let windowHeight2 = $(window).height();
 
+var $mavi_gold = $("#mavi_gold");
+var $mis_quince_gold = $("#mis_quince_gold");
+var $mis_quince_gray = $("#mis_quince_gray");
+var $marco_gold = $("#marco_gold");
+
 window.onscroll = function () {
 	let letter_num2 = windowHeight * 1.08 - $(".letter_content").offset().top;
+	let letter_num = 0;
 
-	let letter_num = letter_num2 / (windowHeight * 0.38);
+	if (letter_num2 > 0) {
+		letter_num = letter_num2 / (windowHeight * 0.38);
+	}
+
+	// console.log(
+	// 	"Letter: " + windowHeight * 1.08,
+	// 	$(".letter_content").offset().top,
+	// 	windowHeight * 0.38,
+	// 	letter_num
+	// );
 
 	// console.log("Letter: " + letter_num);
 	if (window.scrollY < 300) {
-		document
-			.getElementById("mavi_gold")
-			.setAttribute("fill-opacity", 1 - letter_num);
+		$mavi_gold.css("opacity", 1 - letter_num);
 
-		document
-			.getElementById("mis_quince_gold")
-			.setAttribute("fill-opacity", letter_num);
+		$mis_quince_gold.css("opacity", letter_num);
 
-		document
-			.getElementById("mis_quince_gray")
-			.setAttribute("fill-opacity", 1 - letter_num);
+		$mis_quince_gray.css("opacity", 1 - letter_num);
 
-		// Unidad del svg
-		document.getElementById("marco_gold").setAttribute("y", letter_num2 - 58);
+		$marco_gold.css("opacity", 1 - letter_num);
+
+		//Unidad del svg
+		// document.getElementById("marco_gold").setAttribute("y", letter_num2 - 58);
 	}
 };
 
@@ -142,6 +159,11 @@ $(function () {
 		// Keep current slide to left of window on resize
 		var displacment = $(window).width() * 0.85 * currSlide;
 		$slides.css("transform", "translateX(-" + displacment + "px)");
+
+		// document.documentElement.style.setProperty(
+		// 	"--vw",
+		// 	`${window.innerWidth * 0.01}px`
+		// );
 	});
 
 	// cache
@@ -170,4 +192,14 @@ $(function () {
 			showSlide(-1);
 		}
 	});
+
+	// document.addEventListener(
+	// 	"touchstart",
+	// 	function (e) {
+	// 		console.log(e.defaultPrevented); // will be false
+	// 		e.preventDefault(); // does nothing since the listener is passive
+	// 		console.log(e.defaultPrevented); // still false
+	// 	},
+	// 	Modernizr.passiveeventlisteners ? { passive: true } : false
+	// );
 });
