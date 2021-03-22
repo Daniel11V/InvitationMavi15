@@ -9,11 +9,6 @@
 	background-size: auto 100vh;
 	z-index: 1;
 
-	/* -webkit-animation: resetBody 0.1s 8.8s forwards;
-	-o-animation: resetBody 0.1s 8.8s forwards;
-	-moz-animation: resetBody 0.1s 8.8s forwards;
-	animation: resetBody 0.1s 8.8s forwards; */
-
 	-webkit-animation: endCard 0.4s 8.9s forwards;
 	-o-animation: endCard 0.4s 8.9s forwards;
 	-moz-animation: endCard 0.4s 8.9s forwards;
@@ -185,7 +180,6 @@
 	/* font-family: Georgia, "Times New Roman", Times, serif; */
 	/* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
 	margin: 0;
-	/* margin-top: 0.3em; */
 	color: #8a8a8a;
 	text-align: center;
 	font-size: 8.5em;

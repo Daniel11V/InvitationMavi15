@@ -97,12 +97,6 @@ body {
 	position: relative;
 }
 
-/* @media (min-width: 500px) {
-	.letter {
-		height: calc(var(--vh, 1vh) * 100);
-	}
-} */
-
 .sticky_effect {
 	position: relative;
 	top: calc(var(--vh, 1vh) * (-38));
@@ -208,17 +202,9 @@ body {
 #mis_quinces path {
 	fill-rule: evenodd;
 	stroke-width: 0;
-	/* opacity: 0; */
-
-	/* -webkit-animation: appear 2.5s calc(12.8s - var(--time-chrome)) ease-out
-		forwards;
-	-o-animation: appear 2.5s calc(12.8s - var(--time-chrome)) ease-out forwards;
-	-moz-animation: appear 2.5s calc(12.8s - var(--time-chrome)) ease-out forwards;
-	animation: appear 2.5s calc(12.8s - var(--time-chrome)) ease-out forwards; */
 }
 
 #mis_quince_gold {
-	/* opacity: 0 !important; */
 	fill: var(--gold);
 	opacity: 1;
 }
@@ -226,12 +212,10 @@ body {
 #mis_quince_gray {
 	fill: var(--gray);
 	opacity: 0;
-	/* fill: red; */
 }
 
 .information {
 	width: 85%;
-	/* height: calc(70% - 10vw); */
 	height: max(60%, calc(72% - 12vw));
 	position: absolute;
 	left: 7.5%;
@@ -263,15 +247,10 @@ section {
 	text-align: center;
 }
 
-/* section * {
-	flex: 3 0 auto;
-} */
-
 /*  Dentro Section  */
 .line {
 	border-top: solid max(3px, 0.3vw) var(--gold);
 	width: min(calc(var(--vh) * 44), 70%);
-	/* margin: 0 auto; */
 	flex: 6 0 auto;
 }
 
@@ -283,14 +262,11 @@ section {
 	width: calc(var(--vh) * 10.8);
 	height: calc(var(--vh) * 10.8);
 	padding: calc(var(--vh) * 3.24);
-	/* margin: 0 auto; */
-	/* margin-top: calc(var(--vh) * 5.4); */
 	border: solid 3px var(--gold);
 	border-radius: 50%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	/* text-align: center; */
 }
 
 .cuenta-regresiva p {
@@ -304,9 +280,6 @@ section {
 
 header {
 	width: 90%;
-	/* margin: 0 5%; */
-	/* margin-top: calc(calc(var(--vh) * 12.96) - 4vw); */
-	/* text-align: center; */
 
 	font-size: min(46px, 6vw);
 	font-family: "Montserrat", sans-serif;
@@ -325,12 +298,10 @@ header {
 }
 
 section p {
-	/* margin: 18px 2%; */
 	font-size: min(4.2vw, 28px);
 	font-family: "Montserrat", sans-serif;
 	font-weight: 400;
 	color: var(--gray);
-	/* text-align: center; */
 
 	margin: 0;
 	flex: 3 0 auto;
@@ -345,17 +316,14 @@ section p {
 }
 
 .btn {
-	/* margin: 18px 2%; */
 	font-size: min(4.2vw, 28px);
 	font-family: "Montserrat", sans-serif;
 	font-weight: 400;
 	color: var(--gray);
-	/* text-align: center; */
 
 	display: inline-block;
 	font-weight: 400;
 	font-family: "Montserrat", sans-serif;
-	/* text-align: center; */
 	vertical-align: middle;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -373,7 +341,6 @@ section p {
 	border: 1px solid var(--gold);
 	text-decoration: none;
 	text-transform: uppercase;
-	/* margin-top: calc(var(--vh) * 3.24); */
 }
 
 .btn:hover {
@@ -381,18 +348,8 @@ section p {
 	background-color: white;
 }
 
-#confirm {
-	/* margin-top: calc(calc(var(--vh) * 10.8) - 2vw); */
-}
-
-#galeria {
-	/* margin-top: calc(calc(var(--vh) * 7.56) - 2vw);
-	margin-bottom: calc(calc(var(--vh) * 3.24) - 1vw); */
-}
-
 .container {
 	width: min(calc(var(--vh) * 41.04), 95%);
-	/* margin: 0 auto; */
 	flex: 6 0 auto;
 }
 
